@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{052D1236-D077-44E2-8D2A-5EC6244A20AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SmartWorkouts</RootNamespace>
+    <AssemblyName>SmartWorkouts</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.9\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.barcodes, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.forms, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.io, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.kernel, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.layout, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.layout.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfa, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.sign, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.sign.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.styledxmlparser, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.styledxmlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.svg, Version=7.1.14.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itext7.7.1.14\lib\net40\itext.svg.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForms\CreateExercises\addExercises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreateExercises\addExercises.Designer.cs">
+      <DependentUpon>addExercises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreateExercises\changeExercises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreateExercises\changeExercises.Designer.cs">
+      <DependentUpon>changeExercises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreateExercises\choisePremiumWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreateExercises\choisePremiumWork.Designer.cs">
+      <DependentUpon>choisePremiumWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreateExercises\choiseType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreateExercises\choiseType.Designer.cs">
+      <DependentUpon>choiseType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreateExercises\createExercises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreateExercises\createExercises.Designer.cs">
+      <DependentUpon>createExercises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreateExercises\ShowExercises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreateExercises\ShowExercises.Designer.cs">
+      <DependentUpon>ShowExercises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreatePosts\addPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreatePosts\addPost.Designer.cs">
+      <DependentUpon>addPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\adminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\adminMain.Designer.cs">
+      <DependentUpon>adminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreatePosts\ChangePost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreatePosts\ChangePost.Designer.cs">
+      <DependentUpon>ChangePost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreatePosts\ShowPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreatePosts\ShowPost.Designer.cs">
+      <DependentUpon>ShowPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreatePremiumWorks\addPremiumWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreatePremiumWorks\addPremiumWork.Designer.cs">
+      <DependentUpon>addPremiumWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreatePremiumWorks\ChangePremiumWorkcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreatePremiumWorks\ChangePremiumWorkcs.Designer.cs">
+      <DependentUpon>ChangePremiumWorkcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreatePremiumWorks\createPremiumWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreatePremiumWorks\createPremiumWork.Designer.cs">
+      <DependentUpon>createPremiumWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreatePremiumWorks\ShowPremiumWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreatePremiumWorks\ShowPremiumWork.Designer.cs">
+      <DependentUpon>ShowPremiumWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreateWorkout\addWorkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreateWorkout\addWorkout.Designer.cs">
+      <DependentUpon>addWorkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreateWorkout\changeWorkouts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreateWorkout\changeWorkouts.Designer.cs">
+      <DependentUpon>changeWorkouts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreateWorkout\choicePremiumWorkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreateWorkout\choicePremiumWorkout.Designer.cs">
+      <DependentUpon>choicePremiumWorkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreateWorkout\createWorkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreateWorkout\createWorkout.Designer.cs">
+      <DependentUpon>createWorkout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutsDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutsDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutsDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutsDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutsDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutsDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutsDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutsDataSet6.cs">
+      <DependentUpon>SmartWorkoutsDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutsDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutsDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutsDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutsDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmartWorkoutsDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartWorkoutsDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\basicTraining.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\basicTraining.Designer.cs">
+      <DependentUpon>basicTraining.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForms\CreatePosts\createPosts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForms\CreatePosts\createPosts.Designer.cs">
+      <DependentUpon>createPosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\DiagrammContracts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\DiagrammContracts.Designer.cs">
+      <DependentUpon>DiagrammContracts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\DiagrammProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\DiagrammProgress.Designer.cs">
+      <DependentUpon>DiagrammProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\Exercise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\Exercise.Designer.cs">
+      <DependentUpon>Exercise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\FormForExercisecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\FormForExercisecs.Designer.cs">
+      <DependentUpon>FormForExercisecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\FormShowExercise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\FormShowExercise.Designer.cs">
+      <DependentUpon>FormShowExercise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\formBuy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\formBuy.Designer.cs">
+      <DependentUpon>formBuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\formCreateProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\formCreateProgress.Designer.cs">
+      <DependentUpon>formCreateProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\formFavourite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\formFavourite.Designer.cs">
+      <DependentUpon>formFavourite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\formPremium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\formPremium.Designer.cs">
+      <DependentUpon>formPremium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\formProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\formProgress.Designer.cs">
+      <DependentUpon>formProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserForms\MainUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserForms\MainUser.Designer.cs">
+      <DependentUpon>MainUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminForms\CreateExercises\addExercises.resx">
+      <DependentUpon>addExercises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreateExercises\changeExercises.resx">
+      <DependentUpon>changeExercises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreateExercises\choisePremiumWork.resx">
+      <DependentUpon>choisePremiumWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreateExercises\choiseType.resx">
+      <DependentUpon>choiseType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreateExercises\createExercises.resx">
+      <DependentUpon>createExercises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreateExercises\ShowExercises.resx">
+      <DependentUpon>ShowExercises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreatePosts\addPost.resx">
+      <DependentUpon>addPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\adminMain.resx">
+      <DependentUpon>adminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreatePosts\ChangePost.resx">
+      <DependentUpon>ChangePost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreatePosts\ShowPost.resx">
+      <DependentUpon>ShowPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreatePremiumWorks\addPremiumWork.resx">
+      <DependentUpon>addPremiumWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreatePremiumWorks\ChangePremiumWorkcs.resx">
+      <DependentUpon>ChangePremiumWorkcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreatePremiumWorks\createPremiumWork.resx">
+      <DependentUpon>createPremiumWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreatePremiumWorks\ShowPremiumWork.resx">
+      <DependentUpon>ShowPremiumWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreateWorkout\addWorkout.resx">
+      <DependentUpon>addWorkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreateWorkout\changeWorkouts.resx">
+      <DependentUpon>changeWorkouts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreateWorkout\choicePremiumWorkout.resx">
+      <DependentUpon>choicePremiumWorkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreateWorkout\createWorkout.resx">
+      <DependentUpon>createWorkout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\basicTraining.resx">
+      <DependentUpon>basicTraining.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForms\CreatePosts\createPosts.resx">
+      <DependentUpon>createPosts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\DiagrammContracts.resx">
+      <DependentUpon>DiagrammContracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\DiagrammProgress.resx">
+      <DependentUpon>DiagrammProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\Exercise.resx">
+      <DependentUpon>Exercise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\FormForExercisecs.resx">
+      <DependentUpon>FormForExercisecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\FormShowExercise.resx">
+      <DependentUpon>FormShowExercise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\formBuy.resx">
+      <DependentUpon>formBuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\formCreateProgress.resx">
+      <DependentUpon>formCreateProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\formFavourite.resx">
+      <DependentUpon>formFavourite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\formPremium.resx">
+      <DependentUpon>formPremium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\formProgress.resx">
+      <DependentUpon>formProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserForms\MainUser.resx">
+      <DependentUpon>MainUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SmartWorkoutsDataSet.xsc">
+      <DependentUpon>SmartWorkoutsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutsDataSet.xss">
+      <DependentUpon>SmartWorkoutsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet1.xsc">
+      <DependentUpon>SmartWorkoutsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutsDataSet1.xss">
+      <DependentUpon>SmartWorkoutsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet2.xsc">
+      <DependentUpon>SmartWorkoutsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutsDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutsDataSet2.xss">
+      <DependentUpon>SmartWorkoutsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet3.xsc">
+      <DependentUpon>SmartWorkoutsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutsDataSet3.xss">
+      <DependentUpon>SmartWorkoutsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet4.xsc">
+      <DependentUpon>SmartWorkoutsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutsDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutsDataSet4.xss">
+      <DependentUpon>SmartWorkoutsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet5.xsc">
+      <DependentUpon>SmartWorkoutsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutsDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutsDataSet5.xss">
+      <DependentUpon>SmartWorkoutsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet6.xsc">
+      <DependentUpon>SmartWorkoutsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutsDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutsDataSet6.xss">
+      <DependentUpon>SmartWorkoutsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet7.xsc">
+      <DependentUpon>SmartWorkoutsDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutsDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutsDataSet7.xss">
+      <DependentUpon>SmartWorkoutsDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet8.xsc">
+      <DependentUpon>SmartWorkoutsDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="SmartWorkoutsDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SmartWorkoutsDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SmartWorkoutsDataSet8.xss">
+      <DependentUpon>SmartWorkoutsDataSet8.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\32officeicons-7_89710.png" />
+    <Content Include="Images\back.png" />
+    <Content Include="Images\chest.png" />
+    <Content Include="Images\CLOSE_26886.png" />
+    <Content Include="Images\dum.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\dumb.png" />
+    <Content Include="Images\dumbbell_sport_5072.png" />
+    <Content Include="Images\graph_progress_chart_charts_analytics_bars_icon_124175.png" />
+    <Content Include="Images\hands.png" />
+    <Content Include="Images\iconfinder-medal-award-trophy-premium-win-first-place-7-4640274_122684.png" />
+    <Content Include="Images\Legs.png" />
+    <Content Include="Images\like_favourite_heart_thumbs_up_icon_142389.png" />
+    <Content Include="Images\Log.png" />
+    <Content Include="Images\preferencesdesktopuserpassword_94510.png" />
+    <Content Include="Images\REFRESH2_26887.png" />
+    <Content Include="Images\Reg.png" />
+    <Content Include="Images\settingscog_87317.png" />
+    <Content Include="Images\user-orange_25327.png" />
+    <Content Include="Images\webpagehome_85808.png" />
+    <Content Include="Images\ДЛя макета.jpg" />
+    <Content Include="Images\качок.jpg" />
+    <Content Include="Images\Herth_1.png" />
+    <Content Include="ProfileImage\47393c22-a678-49ce-b7eb-46d731045b8e.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProfileImage\cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProfileImage\f7cdeba8-9446-4970-95bf-87573d562c6f.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\стрелка назад.png" />
+    <None Include="Resources\фон упражнения на ноги.png" />
+    <None Include="Resources\Категории упражнений.png" />
+    <None Include="Resources\Изменить показатели.png" />
+    <None Include="Resources\кнопка изменения.png" />
+    <None Include="Resources\фон мои показатели.png" />
+    <None Include="Resources\WorkoutsBack.png" />
+    <None Include="Resources\кнопка купить.png" />
+    <None Include="Resources\фон авторизация.png" />
+    <None Include="Resources\закрыть.png" />
+    <None Include="Resources\юзер.png" />
+    <None Include="Resources\кнопка 3.png" />
+    <None Include="Resources\кнопка 11.png" />
+    <None Include="Resources\кнопка 2.png" />
+    <None Include="Resources\кнопка 1.png" />
+    <None Include="Resources\фон.png" />
+    <None Include="Resources\Значок.ico" />
+    <None Include="Resources\icon.ico" />
+    <None Include="Resources\Fon.png" />
+    <None Include="Resources\AuthorizationBackGround.png" />
+    <None Include="Resources\AuthorizationBackground1.png" />
+    <None Include="Resources\PremiumBackdround.png" />
+    <None Include="Resources\FavouriteBack.png" />
+    <None Include="Resources\11.png" />
+    <None Include="Resources\Auto.png" />
+    <None Include="Resources\FavouriteBack2.png" />
+    <Content Include="Resources\Press.png" />
+    <None Include="Resources\card.png" />
+    <None Include="Resources\sberbank.png" />
+    <None Include="Resources\Вправо_2.png" />
+    <None Include="Resources\Влево_2.png" />
+    <None Include="Resources\Вправо_1.png" />
+    <None Include="Resources\Влево_1.png" />
+    <None Include="Resources\Корзина_2.png" />
+    <None Include="Resources\Корзина.png" />
+    <None Include="Resources\Herth_2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
